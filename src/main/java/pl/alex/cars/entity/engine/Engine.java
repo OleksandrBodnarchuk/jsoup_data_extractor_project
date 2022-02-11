@@ -8,7 +8,6 @@ import lombok.Setter;
 @Setter
 @Builder
 public class Engine {
-    private String engineName;
     private String fuel;
     private String fuelSystem;
 
@@ -22,11 +21,24 @@ public class Engine {
     private int powerOutputKw;
     private int powerOutputRpm;
 
-    private int torqueNm;
-    private int torqueRpm;
-
     private float accelerationTo100;
     private int topSpeed;
 
-
+    @Override
+    public String toString() {
+        return "Engine{\n" +
+                "Fuel" + fuel + '\n' +
+                "Fuel System" + fuelSystem + '\n' +
+                "engineType='" + engineType + '\n' +
+                "enginePosition='" + enginePosition + '\n' +
+                "engineCapacityCc=" + engineCapacityCc + '\n' +
+                "cylinders=" + cylinders + '\n' +
+                "valves=" + valves + '\n' +
+                "powerOutputBhp=" + powerOutputBhp + '\n' +
+                "powerOutputKw=" + powerOutputKw + '\n' +
+                "powerOutputRpm=" + powerOutputRpm + '\n' +
+                "accelerationTo100=" + accelerationTo100 + '\n' +
+                "topSpeed=" + topSpeed + '\n' +
+                '}';
+    }
 }
